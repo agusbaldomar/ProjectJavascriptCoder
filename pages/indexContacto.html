@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En este aparto estara  y esta el formulario para que nos puedas dejar tus consultas o sugerencias">
+    <meta name="keywords" content="contacto, contactanos, dejanos tu consulta , consulta, sugerencias">
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>CONTACTO</title>
+</head>
+<body>
+  <header class="header">
+     <nav class="navbar navbar-expand-sm navbar-dark bg-dark  navText">
+         <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../imagenes/logo-financiero.jpg"  alt="Representa el logo de la empresa" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav justify-content-center w-100">
+                    <a class="nav-link active fw-bold mx-5" aria-current="page" href="../index.html">INICIO</a>
+                    <a class="nav-link active fw-bold mx-5" href="../pages/simulador.html">SIMULA TU PRESTAMO</a>
+                    <a class="nav-link active fw-bold mx-5" href="../pages/cotizacionExt.html">COTIZACION EXTRANJERA</a>
+                    <a class="nav-link active fw-bold mx-5" href="../pages/indexContacto.html" aria-current="page">CONTACTANOS</a>
+                </div>
+            </div>
+         </div>
+     </nav>
+  </header>
+<!--Formulario de consulta------->
+
+<main class="container form w-75">
+        <section class="row my-5 seccion1">
+            <div class="col-12 ">
+                <h1 class="text-center tituloPrincipal bounce-in-top ">Dejanos tu cosulta</h1>    
+                    <form class="row informacion" class="col-12">    
+                        <div class="row my-4">       
+                                <div class="col-md-6 mx-auto">
+                                    <input type="text" class="form-control" placeholder="NOMBRE" data-sb-validations="required,nombre" aria-label="NOMBRE" id="nombre">
+                                </div>
+                        </div>
+                        <div class="row">
+                                    <div class="col-md-6 mx-auto">
+                                        <input type="email" class="form-control  my-5" placeholder="EMAIL" data-sb-validations="required,email" id="inputEmail4">
+                                        <input type="text" class="form-control my-5" placeholder="TELEFONO" data-sb-validations="required,telefono"aria-label="TELEFONO" id="telefono" >
+                                    </div>
+                        </div>
+                        <div class="form-floating my-5 text-center ">
+                            <div>
+                                <label for="" class="my-5" id="consulta"> TU CONSULTA NO MOLESTA</label>
+                            </div>    
+                            <div class="col-md-6 mx-auto">
+                                <textarea class="form-control" id="floatingTextarea2" style="height: 10rem"></textarea>
+                            </div>
+                        </div>
+                        <div class="my-4 mx-3 text-center">
+                            <button type="button" class="btn btn-secondary botonContacto py-1" onclick="validarConsulta()">ENVIAR</button>
+                        </div>
+                        <div class="my-4 mx-3 text-center" id="mensaje">
+                        </div>  
+                    </form>   
+            </div>   
+        </section>    
+</main>
+    
+<!-- FIN DEL FORMULARIO-->
+
+<!--  FOOTER-- -->
+<footer class="container-fluid footer my-5 mb-0" >
+    <div class="container border-bottom p-3">
+          <div class="row d-flex justify-content-evenly align-items-center ">
+              <div class="col-12 col-lg-2 d-flex flex-column justify-content-evenly align-items-center d-lg-inline-block ">
+                      <img class="logo" src="../imagenes/logo-financiero.jpg" style="height: 50px; width: 50px;" alt=" es una imagen que simboliza el logo de la empresa" >
+
+                      <p class="col-12 my-2 text-center text-lg-start ">Simula | Calcula </p>
+              </div>
+      <div class="col-12 col-lg-5 px-4">
+          <div class="col-12 col-lg-6 my-3 text-center text-md-start mx-5 nuestrasRedes">Nuestras Redes</div>
+
+            <div class="col-12 col-lg-6 d-flex flex-row justify-content-around justify-content-lg-evenly">
+              <img src="../imagenes/instagram.jpg" title="instagram" class="mx-2" style="height: 35px; width: 50px;"></a>
+              <img src="../imagenes/facebook.jpg" title="facebook" class="mx-2" style="height: 35px; width: 50px;"></a>
+           </div>
+     </div>
+    </div>
+    </div>
+</footer>
+
+<!-- FIN DEL FOOTER-- -->
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/contactos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un cotizador para saber el valor d etu dinero en las mondeas que rigen en el mundo">
+    <meta name="keywords" content="cotizador, cambio de monedas, cambio de divisas, divisas, dolares , cotizacion, exchange">
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title> Cotizaciones en Moneda Extranjera </title>
+</head>
+<body>
+
+   <header class="header">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark navText">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../imagenes/logo-financiero.jpg" alt="Representa el logo de la empresa" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav justify-content-center w-100">
+                    <a class="nav-link active fw-bold mx-5" aria-current="page" href="../index.html">INICIO</a>
+                    <a class="nav-link active fw-bold mx-5" href="../pages/simulador.html">SIMULA TU PRESTAMO</a>
+                    <a class="nav-link active fw-bold mx-5" href="../pages/cotizacionExt.html">COTIZACION EXTRANJERA</a>
+                    <a class="nav-link active fw-bold mx-5" href="../pages/indexContacto.html" aria-current="page">CONTACTANOS</a>
+                </div>
+            </div>
+        </div>
+     </nav>
+   </header>
+    <body>
+        <main class="container">
+           <section class="row">
+               <div class="seccion1">
+                  <div class="text-center my-4 swirl-in-fwd">
+                     <img src="../imagenes/cambio.jpg" class="img-fluid imgConver" alt="imagen con el logo de las mones existentes">
+                   </div>
+                  <div style="text-align: center;"> 
+                     <h1 class="text-center my-2 display-2 tituloPrincipal bounce-in-top ">Conversor de moneda</h1>
+
+                     <p class="my-3" style="margin-left: 25px;">Escoje la moneda y la cantidad para realizar la conversion</p>
+                  </div>
+                </div>
+                <div class="container text-center my-3 informacion">
+                    <div>
+                        <select id="moneda-uno">
+                            <option value="AED">AED</option>
+                            <option value="ARS">ARS</option>
+                            <option value="AUD">AUD</option>
+                            <option value="BGN">BGN</option>
+                            <option value="BRL">BRL</option>
+                            <option value="BSD">BSD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CLP">CLP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="COP">COP</option>
+                            <option value="CZK">CZK</option>
+                            <option value="DKK">DKK</option>
+                            <option value="DOP">DOP</option>
+                            <option value="EGP">EGP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="FJD">FJD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="GTQ">GTQ</option>
+                            <option value="HKD">HKD</option>
+                            <option value="HRK">HRK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="IDR">IDR</option>
+                            <option value="ILS">ILS</option>
+                            <option value="INR">INR</option>
+                            <option value="ISK">ISK</option>
+                            <option value="JPY">JPY</option>
+                            <option value="KRW">KRW</option>
+                            <option value="KZT">KZT</option>
+                            <option value="MXN">MXN</option>
+                            <option value="MYR">MYR</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="PAB">PAB</option>
+                            <option value="PEN">PEN</option>
+                            <option value="PHP">PHP</option>
+                            <option value="PKR">PKR</option>
+                            <option value="PLN">PLN</option>
+                            <option value="PYG">PYG</option>
+                            <option value="RON">RON</option>
+                            <option value="RUB">RUB</option>
+                            <option value="SAR">SAR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="TRY">TRY</option>
+                            <option value="TWD">TWD</option>
+                            <option value="UAH">UAH</option>
+                            <option value="USD" selected>USD</option>
+                            <option value="UYU">UYU</option>
+                            <option value="VND">VND</option>
+                            <option value="ZAR">ZAR</option>
+            
+                        </select>
+            
+                        <input 
+                        type="number" 
+                        id="cantidad-uno" 
+                        placeholder="0"  
+                        value="1"
+                        >
+            
+                    </div>
+            
+                    <div class="taza-cambio-container my-4">
+                        <button class="btn" id="taza">
+                            cambio
+                        </button>
+            
+                        <div class="cambio" id="cambio"></div>
+            
+                    </div>           
+                    <div >
+                        <select id="moneda-dos">
+                            <option value="AED">AED</option>
+                            <option value="ARS" selected>ARS</option>
+                            <option value="AUD">AUD</option>
+                            <option value="BGN">BGN</option>
+                            <option value="BRL">BRL</option>
+                            <option value="BSD">BSD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CLP">CLP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="COP">COP</option>
+                            <option value="CZK">CZK</option>
+                            <option value="DKK">DKK</option>
+                            <option value="DOP">DOP</option>
+                            <option value="EGP">EGP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="FJD">FJD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="GTQ">GTQ</option>
+                            <option value="HKD">HKD</option>
+                            <option value="HRK">HRK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="IDR">IDR</option>
+                            <option value="ILS">ILS</option>
+                            <option value="INR">INR</option>
+                            <option value="ISK">ISK</option>
+                            <option value="JPY">JPY</option>
+                            <option value="KRW">KRW</option>
+                            <option value="KZT">KZT</option>
+                            <option value="MXN">MXN</option>
+                            <option value="MYR">MYR</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="PAB">PAB</option>
+                            <option value="PEN">PEN</option>
+                            <option value="PHP">PHP</option>
+                            <option value="PKR">PKR</option>
+                            <option value="PLN">PLN</option>
+                            <option value="PYG">PYG</option>
+                            <option value="RON">RON</option>
+                            <option value="RUB">RUB</option>
+                            <option value="SAR">SAR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="TRY">TRY</option>
+                            <option value="TWD">TWD</option>
+                            <option value="UAH">UAH</option>
+                            <option value="USD">USD</option>
+                            <option value="UYU">UYU</option>
+                            <option value="VND">VND</option>
+                            <option value="ZAR">ZAR</option>
+            
+                        </select>            
+                        <input 
+                        type="number" 
+                        id="cantidad-dos" 
+                        placeholder="0">  
+                                    
+                    </div>
+                </div>
+           </section>
+        </main>
+
+    <!-----           FOOTER      ----- -->
+    <footer class="container-fluid footer my-5 mb-0" >
+        <div class="container border-bottom p-3">
+              <div class="row d-flex justify-content-evenly align-items-center ">
+                  <div class="col-12 col-lg-2 d-flex flex-column justify-content-evenly align-items-center d-lg-inline-block ">
+                          <img class="logo" src="../imagenes/logo-financiero.jpg" style="height: 50px; width: 50px;" alt=" es una imagen que simboliza el logo de la empresa" >
+    
+                          <p class="col-12 my-2 text-center text-lg-start ">Simula | Calcula </p>
+                  </div>
+          <div class="col-12 col-lg-5 px-4">
+              <div class="col-12 col-lg-6 my-3 text-center text-md-start mx-5 nuestrasRedes">Nuestras Redes</div>
+    
+                <div class="col-12 col-lg-6 d-flex flex-row justify-content-around justify-content-lg-evenly">
+                  <img src="../imagenes/instagram.jpg" title="instagram" class="mx-2" style="height: 35px; width: 50px;"></a>
+                  <img src="../imagenes/facebook.jpg" title="facebook" class="mx-2" style="height: 35px; width: 50px;"></a>
+               </div>
+         </div>
+        </div>
+        </div>
+    </footer>
+
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/cambioMoneda.js"></script>
+
+</body>
+
+</html>
